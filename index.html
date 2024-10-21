@@ -53,6 +53,25 @@
                         message: document.getElementById("message").value,
                     };
 
+                    // Validation: Check if all fields are filled
+                    if (
+                        !formData.name ||
+                        !formData.email ||
+                        !formData.contact ||
+                        !formData.subject ||
+                        !formData.message
+                    ) {
+                        alert("All fields are required.");
+                        return;
+                    }
+
+                    // Validation: Check for valid email format
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(formData.email)) {
+                        alert("Please enter a valid email address.");
+                        return;
+                    }
+
                     try {
                         // Send POST request to MockAPI
                         const response = await fetch(
