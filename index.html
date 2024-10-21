@@ -72,6 +72,24 @@
                         return;
                     }
 
+                    // Validation: Check for valid contact number (e.g., 10 digits)
+                    const contactPattern = /^\d{10}$/; // Adjust the pattern based on your requirements
+                    if (!contactPattern.test(formData.contact)) {
+                        alert("Please enter a valid 10-digit contact number.");
+                        return;
+                    }
+
+                    // Validation: Check for excessive input length
+                    if (formData.name.length > 50) {
+                        alert("Name must be 50 characters or less.");
+                        return;
+                    }
+
+                    if (formData.message.length > 500) {
+                        alert("Message must be 500 characters or less.");
+                        return;
+                    }
+
                     try {
                         // Send POST request to MockAPI
                         const response = await fetch(
