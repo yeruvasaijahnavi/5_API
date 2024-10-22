@@ -374,6 +374,22 @@ form {
     margin-bottom: 0.5rem;
 }
 
+.form-group input:focus {
+    border-color: #0dba4b !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 186, 75, 0.25) !important;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 8rem;
+}
+.form-group textarea:focus {
+    border-color: #0dba4b !important;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(13, 186, 75, 0.25) !important;
+}
+
 .form-group label span {
     color: #ef4444;
 }
