@@ -38,6 +38,30 @@ const validateFormData = (formData: ContactFormData): string | null => {
     return null; // All validations passed
 };
 
+// Function to display error styles
+const displayError = (inputId: string) => {
+    const container = document.getElementById(inputId)?.parentElement; // Get the parent form-group
+    if (container) {
+        container.classList.add("error"); // Add red border
+        const icon = container.querySelector("img"); // Find the warning icon
+        if (icon) {
+            icon.style.display = "inline-block"; // Show warning icon
+        }
+    }
+};
+
+// Function to clear error styles
+const clearError = (inputId: string) => {
+    const container = document.getElementById(inputId)?.parentElement; // Get the parent form-group
+    if (container) {
+        container.classList.remove("error"); // Remove red border
+        const icon = container.querySelector("img"); // Find the warning icon
+        if (icon) {
+            icon.style.display = "none"; // Hide warning icon
+        }
+    }
+};
+
 document
     .getElementById("contactForm")
     ?.addEventListener("submit", async function (event: Event) {
@@ -58,7 +82,24 @@ document
         const validationError = validateFormData(formData);
         if (validationError) {
             alert(validationError);
-            return;
+
+            // Display error for empty fields
+            if (!formData.name) displayError("name");
+            else clearError("name");
+
+            if (!formData.email) displayError("email");
+            else clearError("email");
+
+            if (!formData.contact) displayError("contact");
+            else clearError("contact");
+
+            if (!formData.subject) displayError("subject");
+            else clearError("subject");
+
+            if (!formData.message) displayError("message");
+            else clearError("message");
+
+            return; // Stop submission if there are errors
         }
 
         try {
@@ -81,6 +122,7 @@ document
                     "Form submitted successfully! Submission ID: " +
                         jsonResponse.id
                 );
+                // Optionally clear the form fields here
             } else {
                 alert("Failed to submit the form");
             }

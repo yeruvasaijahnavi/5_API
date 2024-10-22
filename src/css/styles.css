@@ -374,6 +374,23 @@ form {
     margin-bottom: 0.5rem;
 }
 
+.form-group img {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* Hidden by default */
+    width: 20px;
+    height: 20px;
+}
+
+.error {
+    border: 2px solid red !important;
+}
+/* Show the warning icon when the input has an error */
+.form-group.error img {
+    display: inline-block;
+}
 .form-group input:focus {
     border-color: #0dba4b !important;
     outline: 0;
