@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Contact Us</title>
-        <script src="src/script.ts" defer></script>
+        <script src="src/js/script.js" defer></script>
+
         <link rel="stylesheet" href="src/css/styles.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,9 +13,114 @@
             href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
     </head>
     <body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <!-- Hamburger Menu Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">
+                    <img
+                        src="/src/assets/images/guvi_logo.png"
+                        alt="guvi_logo"
+                    />
+                </a>
+            </div>
+
+            <!-- Navbar Links -->
+            <ul class="nav-links" id="nav-links">
+                <li class="nav-courses-btn">
+                    <a href="#" class="dropbtn">Courses</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">LIVE Classes</a>
+                    <div class="dropdown-content">
+                        <a href="#">ZEN CLASS live online classes</a>
+                        <a href="#">
+                            IIT-M Pravartak Certified Data Science Program
+                        </a>
+                        <a href="#">Automation & Testing Program</a>
+                        <a href="#">Explore More Programs</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Practice</a>
+                    <div class="dropdown-content">
+                        <a href="#">Codekata</a>
+                        <a href="#">Webkata</a>
+                        <a href="#">Debugging</a>
+                        <a href="#">IDE Online Compiler</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Learn Hub</a>
+                        <a href="#">Rewards</a>
+                        <a href="#">Referral</a>
+                        <a href="#">Forum Support</a>
+                        <a href="#">Blogs</a>
+                        <a href="#">App Download</a>
+                        <a href="#">Become an Affiliate</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Our Solutions</a>
+                    <div class="dropdown-content">
+                        <a href="#">HackerKid</a>
+                        <a href="#">GUVI for Corporates</a>
+                        <a href="#">Placement Preparation</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"
+                        ><i
+                            class="fa-regular fa-circle-question"
+                            style="color: #b9babc"
+                        ></i
+                    ></a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn"
+                        ><i
+                            class="fa-solid fa-circle-user"
+                            style="color: #8a8a8a"
+                        ></i
+                    ></a>
+                    <div class="dropdown-content">
+                        <a href="#">My Profile</a>
+                        <a href="#">Change Password</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
         <section class="form-section">
+            <img
+                src="src/assets/images/triangles.png"
+                alt=""
+                srcset=""
+                class="bottom-left-triangles"
+            />
+            <img
+                src="src/assets/images/triangles.png"
+                alt=""
+                srcset=""
+                class="top-triangles"
+            />
             <div class="form-container">
                 <div class="flex-container">
                     <!-- Left column: Contact information -->
@@ -40,14 +146,14 @@
                         </div>
                         <hr />
 
-                        <div class="contact-item">
+                        <div class="contact-item msg_icon">
                             <img
                                 src="/src/assets/images/message_icon.png"
                                 alt="Message Icon"
                                 width="24"
                                 height="24"
                             />
-                            <p>
+                            <p class="msg_icon_txt">
                                 <span>Write to us</span><br /><strong
                                     >cs@guvi.in</strong
                                 >
@@ -55,7 +161,7 @@
                         </div>
                         <hr />
 
-                        <div class="contact-item">
+                        <div class="contact-item location">
                             <img
                                 src="/src/assets/images/location_icon.png"
                                 alt="Location Icon"
@@ -81,61 +187,79 @@
                     </div>
 
                     <div class="right-column">
-                        <h1>Say <span class="hello">Hello !</span></h1>
-                        <p>Feel free to stop by and say hi!</p>
+                        <div class="right-column-box">
+                            <h2>Say <span class="hello">Hello !</span></h2>
+                            <p>Feel free to stop by and say hi !</p>
 
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    required
+                            <form id="contactForm">
+                                <img
+                                    src="src/assets/images/form-triangles.png"
+                                    alt=""
+                                    srcset=""
+                                    class="form-triangles"
                                 />
-                            </div>
+                                <div class="form-group">
+                                    <label for="name"
+                                        >Name <span>*</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="name"
+                                        name="name"
+                                        required
+                                    />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="email">E-mail id</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    required
-                                />
-                            </div>
+                                <div class="form-group">
+                                    <label for="email"
+                                        >E-mail id <span>*</span></label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        required
+                                    />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="contact">Contact Number</label>
-                                <input
-                                    type="tel"
-                                    id="contact"
-                                    name="contact"
-                                    required
-                                />
-                            </div>
+                                <div class="form-group">
+                                    <label for="contact"
+                                        >Contact Number <span>*</span></label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="contact"
+                                        name="contact"
+                                        required
+                                    />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
-                                    required
-                                />
-                            </div>
+                                <div class="form-group">
+                                    <label for="subject"
+                                        >Subject <span>*</span></label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="subject"
+                                        name="subject"
+                                        required
+                                    />
+                                </div>
 
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    required
-                                ></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <label for="message"
+                                        >Message <span>*</span></label
+                                    >
+                                    <textarea
+                                        id="message"
+                                        name="message"
+                                        required
+                                    ></textarea>
+                                </div>
 
-                            <button type="submit">Send</button>
-                        </form>
+                                <button type="submit">Send</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
