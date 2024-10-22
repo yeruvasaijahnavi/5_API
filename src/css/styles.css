@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*,
+:before,
+:after {
+    font-family: "DM Sans", Arial, sans-serif;
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #e5e7eb;
+}
+
+.form-section {
+    position: relative;
+    background-color: #fff;
+}
+
+.form-container {
+    max-width: 1200px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+hr {
+    height: 0;
+    color: rgb(156, 163, 175);
+    border-top-width: 1px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 170px;
+    font-size: 1.2rem;
+}
+
+.left-column {
+    width: 45%;
+}
+
+.left-column h1 {
+    margin-bottom: 10px;
+}
+
+.left-column p {
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item img {
+    margin-right: 10px;
+}
+.contact-item p span {
+    font-size: 1rem;
+    color: #aaa;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.hello {
+    color: #099f4e;
+}
+.right-column {
+    background-size: 100% 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    min-width: 26%;
+    box-shadow: #00000059 0 5px 15px !important;
+    position: relative;
+    color: #000;
+    margin-left: 6rem;
+    padding: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0dba4b !important;
+    border: none !important;
+    color: #fff !important;
+    height: 3rem !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    box-shadow: 0 8px 16px #00000026 !important;
+    border-radius: 4px !important;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

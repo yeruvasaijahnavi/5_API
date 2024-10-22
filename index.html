@@ -3,39 +3,142 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="dest/script.js" defer></script>
-        <title>Contact Form</title>
+        <title>Contact Us</title>
+        <script src="src/script.ts" defer></script>
+        <link rel="stylesheet" href="src/css/styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+            rel="stylesheet"
+        />
     </head>
     <body>
-        <h1>Contact Form</h1>
-        <form id="contactForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required /><br /><br />
+        <section class="form-section">
+            <div class="form-container">
+                <div class="flex-container">
+                    <!-- Left column: Contact information -->
+                    <div class="left-column">
+                        <h1>Contact Us</h1>
+                        <p>
+                            Let us know your queries, feedbacks and enquiries.
+                            We are here to support you 24/7.
+                        </p>
+                        <hr />
+                        <div class="contact-item">
+                            <img
+                                src="/src/assets/images/call_icon.png"
+                                alt="Call Icon"
+                                width="24"
+                                height="24"
+                            />
+                            <p>
+                                <span>Give us a call</span><br /><strong
+                                    >+91 9736097320</strong
+                                >
+                            </p>
+                        </div>
+                        <hr />
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required /><br /><br />
+                        <div class="contact-item">
+                            <img
+                                src="/src/assets/images/message_icon.png"
+                                alt="Message Icon"
+                                width="24"
+                                height="24"
+                            />
+                            <p>
+                                <span>Write to us</span><br /><strong
+                                    >cs@guvi.in</strong
+                                >
+                            </p>
+                        </div>
+                        <hr />
 
-            <label for="contact">Contact Number:</label>
-            <input
-                type="tel"
-                id="contact"
-                name="contact"
-                required
-            /><br /><br />
+                        <div class="contact-item">
+                            <img
+                                src="/src/assets/images/location_icon.png"
+                                alt="Location Icon"
+                                width="24"
+                                height="24"
+                            />
+                            <p>
+                                <span>Visit us in Chennai @</span><br />
+                                <strong
+                                    >IITM Research park - phase 2, module #9,
+                                    3rd floor, D block, Kanagam Rd, Tharamani,
+                                    Chennai, Tamil Nadu 600113</strong
+                                ><br /><br />
+                                <span>Visit us in Noida @</span><br />
+                                <strong
+                                    >A11, HCL Corporation Pvt. Ltd, Block A,
+                                    Sector 3, Noida, Uttar Pradesh
+                                    201307</strong
+                                >
+                            </p>
+                        </div>
+                        <hr />
+                    </div>
 
-            <label for="subject">Subject:</label>
-            <input
-                type="text"
-                id="subject"
-                name="subject"
-                required
-            /><br /><br />
+                    <div class="right-column">
+                        <h1>Say <span class="hello">Hello !</span></h1>
+                        <p>Feel free to stop by and say hi!</p>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea
-            ><br /><br />
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    required
+                                />
+                            </div>
 
-            <button type="submit">Submit</button>
-        </form>
+                            <div class="form-group">
+                                <label for="email">E-mail id</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact">Contact Number</label>
+                                <input
+                                    type="tel"
+                                    id="contact"
+                                    name="contact"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
